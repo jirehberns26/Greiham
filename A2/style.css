@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
+:root {
+  --color-text: #090808;
+  --color-surface: rgba(250, 235, 215, 0.611);
+  --color-border: #000;
+  --color-accent: #9c1717;
+
+  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+
+  --radius-card: 0.5rem;
+  --radius-img: 1.875rem;
+  --space-md: 1.25rem;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f3ece4;
+    --color-surface: rgba(40, 30, 25, 0.85);
+    --color-border: #5a4a42;
+    --color-accent: #e05a5a;
+  }
+  body { background-color: #141110; }
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1.125rem;          /* 18px, but respects user font settings */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.container {
+  width: min(100% - 2rem, 650px);   /* never touches screen edges on mobile */
+  margin: 3rem auto;
+  padding: var(--space-md);
+
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.12);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+.text-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Heading/emphasis text (font-family is inherited, so no need to repeat it) */
+.center {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  text-wrap: balance;               /* avoids orphaned words in headings */
+}
+
+/* Justified body text (name kept for compatibility; see note below) */
+.text-center {
+  text-align: justify;
+  hyphens: auto;                    /* prevents ugly gaps in justified text */
+  text-wrap: pretty;
+}
+
+/* ==========================================================================
+   Images
+   ========================================================================== */
+.img {
+  display: block;
+  width: min(100%, 300px);          /* shrinks on small screens */
+  aspect-ratio: 1;
+  height: auto;
+  margin: var(--space-md) auto;
+  padding: 5px;
+
+  object-fit: cover;                /* no stretching or distortion */
+  border: 3px solid var(--color-accent);
+  border-radius: var(--radius-img);
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

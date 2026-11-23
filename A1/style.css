@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    background-color: #f5eee5;
+    line-height: 1.6;
+}
+
+/* Main Container */
+.container {
+    width: 60%;
+    max-width: 750px;
+    margin: 75px auto;
+    padding: 25px;
+    border: 2px solid #654c08;
+    border-radius: 10px;
+    background-color: rgb(248, 232, 214);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Text Styles */
+.text-center {
+    text-align: center;
+    color: rgb(101, 76, 8);
+}
+
+.text {
+    text-transform: capitalize;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+/* Biography */
+.bio {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Content Boxes */
+.box {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fffaf3;
+    border: 1px solid #e4d3b9;
+}
+
+/* Hobbies */
+ul {
+    padding-left: 30px;
+}
+
+li {
+    padding: 3px 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 5px;
+    line-height: 2;
+    font-size: 15px;
+    border: 1px solid #654c08;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Facebook */
+.btn-facebook {
+    background-color: rgb(131, 109, 43);
+    color: white;
+}
+
+.btn-facebook:hover {
+    background-color: rgb(89, 189, 225);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Instagram */
+.btn-instagram {
+    background-color: rgb(131, 109, 43);
+    color: white;
+}
+
+.btn-instagram:hover {
+    background-color: rgb(208, 119, 177);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* TikTok */
+.btn-tiktok {
+    background-color: rgb(131, 109, 43);
+    color: white;
+}
+
+.btn-tiktok:hover {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Keyboard Accessibility */
+.btn:focus-visible {
+    outline: 3px solid #654c08;
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 35px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .bio {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
